@@ -1,0 +1,125 @@
+/* Grid Layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.wide-item {
+  grid-column: span 3;
+}
+
+.narrow-item {
+  grid-column: span 2;
+}
+
+/* Grid Items */
+.grid-item {
+  position: relative;
+  display: block;
+  height: 300px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Card Styling */
+.card,
+.card-body,
+.card-body img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Overlay and Content */
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.4s ease;
+}
+
+.item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  z-index: 1;
+}
+
+.item-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 15px 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* HR Styling */
+.heading-hr {
+  width: 100px;
+  border-top: 3px solid #333;
+  margin: 15px auto;
+}
+
+.title-hr {
+  width: 60px;
+  border-top: 2px solid white;
+  margin: 0 auto;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+/* Hover Effects */
+.grid-item:hover,
+.grid-item:focus {
+  transform: scale(1.04);
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.grid-item:hover .item-overlay,
+.grid-item:focus .item-overlay {
+  opacity: 0;
+}
+
+.grid-item:hover .title-hr,
+.grid-item:focus .title-hr {
+  width: 100px;
+  opacity: 1;
+}
+
+/* Focus styles for accessibility */
+.grid-item:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide-item,
+  .narrow-item {
+    grid-column: span 1 !important;
+    height: 250px;
+  }
+
+  .item-title {
+    font-size: 1.5rem;
+  }
+
+  .heading-hr {
+    width: 80px;
+    border-width: 2px;
+  }
+}

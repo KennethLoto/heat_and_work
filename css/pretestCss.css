@@ -1,0 +1,85 @@
+/* Base styles */
+.about_section {
+  padding: 50px 0;
+}
+
+.question-row {
+  margin-bottom: 60px;
+}
+
+.quiz-content {
+  padding: 0 15px;
+}
+
+.quiz-question {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.quiz-options {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.quiz-options li {
+  margin-bottom: 8px;
+}
+
+.quiz-image {
+  max-width: 100%;
+  height: auto;
+  padding: 0 15px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Alternating layout */
+  .order-md-1 {
+    order: 1 !important;
+  }
+  .order-md-2 {
+    order: 2 !important;
+  }
+
+  .question-row {
+    margin-bottom: 80px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .about_section {
+    padding: 30px 0;
+  }
+
+  .question-row {
+    margin-bottom: 40px;
+  }
+
+  .quiz-question {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .quiz-options {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Force mobile stacking */
+  [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Add spacing between stacked items */
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+}
