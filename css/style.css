@@ -1387,7 +1387,7 @@ html {
 .left_blog_top {
     background: rgba(255, 255, 255, 0);  /* Fully transparent background */
     width: 815px;
-    height: 585px;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 9;
