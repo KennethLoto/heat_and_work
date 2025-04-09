@@ -1,0 +1,209 @@
+/* Base styles for mobile first approach */
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+.layout_padding {
+  padding: 2rem 0;
+}
+
+/* Responsive typography classes */
+.responsive-heading {
+  font-size: 1.5rem; /* 24px on mobile */
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.responsive-subheading {
+  font-size: 1.25rem; /* 20px on mobile */
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.responsive-subtitle {
+  font-size: 1rem; /* 16px on mobile */
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.responsive-text {
+  font-size: 1rem; /* 16px on mobile */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Text justification */
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Responsive images */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.quote-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+}
+
+/* Spacing adjustments */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mb-md-0 {
+  margin-bottom: 0;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.my-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Carousel item padding */
+.item {
+  padding: 1rem;
+}
+
+/* List styling */
+ul.responsive-text {
+  padding-left: 1.5rem;
+}
+
+ul.responsive-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* Video container styling */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Center alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Owl Carousel adjustments */
+.owl-carousel .owl-stage {
+  display: flex;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .responsive-heading {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .responsive-subheading {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .responsive-subtitle {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .responsive-text {
+    font-size: 1.0625rem; /* 17px */
+  }
+
+  .layout_padding {
+    padding: 3rem 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .responsive-heading {
+    font-size: 2rem; /* 32px */
+  }
+
+  .responsive-subheading {
+    font-size: 1.625rem; /* 26px */
+  }
+
+  .responsive-text {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .layout_padding {
+    padding: 4rem 0;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .responsive-heading {
+    font-size: 2.25rem; /* 36px */
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 400px) {
+  .responsive-heading {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .responsive-subheading {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .responsive-img {
+    max-width: 120px;
+  }
+
+  .video-container {
+    margin: 1rem 0;
+  }
+}
