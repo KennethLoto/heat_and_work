@@ -1387,7 +1387,7 @@ html {
 .left_blog_top {
     background: rgba(255, 255, 255, 0);  /* Fully transparent background */
     width: 815px;
-    height: 100vh;
+    height: 75vh;  /* Maintain 75vh height on all screen sizes */
     top: 0;
     left: 0;
     z-index: 9;
@@ -1399,6 +1399,7 @@ html {
     margin: 0 auto;  /* To center the container horizontally */
     border-radius: 15px;  /* Optional: rounded corners */
     text-align: center;  /* Center the text */
+    padding: 20px;  /* Add padding for better spacing */
 }
 
 .left_blog_top h3 {
@@ -1445,7 +1446,7 @@ html {
 @media (max-width: 768px) {
     .left_blog_top {
         width: 90%;  /* Adjust width to fit smaller screens */
-        height: auto; /* Let height adjust based on content */
+        height: 75vh; /* Maintain 75vh height on tablet */
         padding: 15px; /* Add padding for spacing */
     }
 
@@ -1471,7 +1472,7 @@ html {
 @media (max-width: 480px) {
     .left_blog_top {
         width: 90%;  /* Adjust width to fit very small screens */
-        height: auto; /* Let height adjust based on content */
+        height: 75vh; /* Maintain 75vh height on mobile */
         padding: 10px; /* Add padding for spacing */
     }
 
@@ -1492,8 +1493,6 @@ html {
         margin-bottom: 10px;  /* Smaller bottom margin */
     }
 }
-
-
 
 .right_blog_top {
     float: right;
