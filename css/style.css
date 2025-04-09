@@ -903,6 +903,89 @@ section .small_head h2 {
     width: 210px;
 }
 
+      .logo-text-new {
+        color: white; /* White text color */
+        font-size: 25px; /* Adjust size as needed */
+        font-weight: bold; /* Optional for bold text */
+        text-transform: uppercase; /* Convert text to uppercase */
+        margin-bottom: 0; /* Remove extra margin */
+        padding-left: 10px; /* Adjusted padding */
+        transition: color 0.3s ease; /* Add transition for hover effect */
+      }
+
+      /* Hover effect for logo */
+      .logo-text-new:hover {
+        color: #f0f0f0; /* Lighter color on hover */
+      }
+
+      /* Hamburger menu */
+      .toggle_icon {
+        font-size: 30px; /* Size of text-based hamburger icon */
+        cursor: pointer;
+        display: block; /* Make the hamburger icon always visible */
+        color: white; /* White color for the hamburger icon */
+        transition: color 0.3s ease; /* Smooth color transition */
+        margin-right: 10px; /* Reduced gap between icon and logo */
+      }
+
+      /* Hover effect for hamburger icon */
+      .toggle_icon:hover {
+        color: #f0f0f0; /* Lighter white when hovering */
+      }
+
+      /* Mobile navigation (hidden by default) */
+      .mobile-nav {
+        display: none;
+        background-color: #333; /* Background color for the mobile nav */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 1000;
+      }
+
+      .mobile-nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease; /* Add transition for hover */
+      }
+
+      .mobile-nav a:hover {
+        background-color: #444;
+      }
+
+      /* Show mobile navigation when toggled */
+      .mobile-nav.active {
+        display: block;
+      }
+
+      /* Ensure the logo and hamburger are aligned */
+      .header .full {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Changed from space-between to flex-start */
+        gap: 10px; /* Reduced gap between elements */
+      }
+
+      /* Mobile responsiveness: stack items vertically */
+      @media (max-width: 768px) {
+        .header .full {
+          flex-direction: row; /* Keep items in a row on mobile */
+          align-items: center; /* Center items vertically */
+        }
+        .logo-text-new {
+          padding-left: 0; /* Remove extra padding on small screens */
+          font-size: 20px; /* Slightly smaller font on mobile */
+        }
+        .toggle_icon {
+          font-size: 25px; /* Slightly smaller icon on mobile */
+        }
+      }
+
 .home_page2 .logo_circle {
     background: #fff;
     float: left;
