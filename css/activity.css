@@ -1,0 +1,166 @@
+.activity-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  color: black;
+  line-height: 1.8;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.8rem;
+  margin: 35px 0 25px;
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  text-align: justify; /* Justify the paragraph text */
+}
+
+.bullet-list {
+  padding-left: 60px;
+  margin-bottom: 35px;
+  list-style-type: none;
+}
+
+.bullet-list li {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.bullet-list li:before {
+  content: "‣";
+  position: absolute;
+  left: -20px;
+  font-size: 1.5rem;
+}
+
+.step-list {
+  padding-left: 40px;
+  margin-bottom: 35px;
+  counter-reset: step-counter;
+  list-style-type: none;
+}
+
+.step-list li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 90px;
+  font-size: 1.3rem;
+}
+
+.step-list li:before {
+  display: none; /* Remove default list styling */
+}
+
+.step-list li span {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  width: 80px;
+}
+
+/* Accordion Styles */
+.accordion {
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 20px 20px 20px 40px;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-button:after {
+  content: "+";
+  position: absolute;
+  left: 10px;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion-button.active:after {
+  content: "-";
+}
+
+.accordion-content {
+  padding: 0 20px 0 60px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.accordion-content p {
+  padding: 15px 0 25px 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .activity-section {
+    padding: 30px 25px;
+    max-width: 95%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  p,
+  .bullet-list li,
+  .step-list li,
+  .accordion-button {
+    font-size: 1.2rem;
+    text-align: justify; /* Justify the paragraph text */
+  }
+
+  .bullet-list {
+    padding-left: 60px;
+  }
+  .step-list,
+  .accordion {
+    padding-left: 40px;
+  }
+
+  .step-list li {
+    padding-left: 70px;
+  }
+
+  .step-list li span {
+    width: 60px;
+  }
+
+  .accordion-button {
+    padding: 15px 15px 15px 35px;
+  }
+
+  .accordion-content {
+    padding-left: 45px;
+  }
+}

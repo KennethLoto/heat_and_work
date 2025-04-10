@@ -69,3 +69,22 @@
 .summary-section {
   margin-bottom: 40px;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.activity-link {
+  padding: 10px 30px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.activity-link:hover {
+  color: white;
+  background-color: black;
+}
