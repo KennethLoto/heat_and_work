@@ -50,20 +50,20 @@ function checkAnswers() {
   // Correct answers
   const correctAnswers = {
     q1: "c",
-    q2: "c",
-    q3: "a",
-    q4: "b",
-    q5: "d",
-    q6: "c",
-    q7: "c",
+    q2: "d",
+    q3: "b",
+    q4: "c",
+    q5: "a",
+    q6: "b",
+    q7: "b",
     q8: "c",
-    q9: "b",
-    q10: "b",
-    q11: "a",
-    q12: "d",
-    q13: "b",
+    q9: "c",
+    q10: "c",
+    q11: "b",
+    q12: "a",
+    q13: "a",
     q14: "a",
-    q15: "a",
+    q15: "d",
   };
 
   let score = 0;
@@ -120,16 +120,18 @@ function checkAnswers() {
 
   // Set custom message based on score
   if (score === 15) {
-    scoreMessage.textContent = "Great! You're on fire! 🔥 Keep it up!";
+    scoreMessage.textContent =
+      "Excellent! You’ve mastered it! 🔥 Keep learning!";
     scoreMessage.style.color = "#27ae60";
     scoreMessage.style.backgroundColor = "#e8f5e9";
   } else if (score >= 10) {
-    scoreMessage.textContent = "Nice work! 🔥 Keep exploring the materials!";
+    scoreMessage.textContent =
+      "Well done! 🔥 Review the materials to sharpen your skills!";
     scoreMessage.style.color = "#f39c12";
     scoreMessage.style.backgroundColor = "#fff8e1";
   } else {
     scoreMessage.textContent =
-      "Good effort! 🔥 Check the materials to improve!";
+      "Nice try! 🔥 Dive back into the materials and improve!";
     scoreMessage.style.color = "#e74c3c";
     scoreMessage.style.backgroundColor = "#ffebee";
   }

@@ -47,361 +47,402 @@
 <body id="default_theme" class="about">
    <!-- header -->
    <div id="mySidenav" class="sidenav">
-      <ul class="menu_sidebar">
-         <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-         <li><a href="index.html">01. Home</a></li>
-         <li><a href="pretest.html">02. Pretest</i></a></li>
-         <li><a href="discussion.html">03. Discussion</a></li>
-         <li><a href="firstlaw.html">04. First Law</a></li>
-         <li><a href="summary.html">05. Summary</a></li>
-         <li><a href="posttest.html">06. Post-Test</a></li>
-      </ul>
-   </div>
-   <header class="header">
-      <div class="header_top">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="full">
-                     <span class="toggle_icon" style="cursor:pointer" onclick="openNav()"><img src="img/menu_icon.png" alt="#" /></span>
-                     <div class="logo_circle">
-                        <a href="index.html"><img class="img-responsive" src="img/logo.png" alt="#" /></a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-8">
-                  <div class="float-right">
-                     <ul class="top_links">
-                        <li><a href="#"><img src="images/profile_icon.png" alt="#" /></a></li>
-                        <li class="searchbar">
-                           <input class="search_input" type="text" name="" placeholder="Search...">
-                           <a href="#" class="search_icon"><img src="images/search_icon.png" alt="#" /></a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+    <ul class="menu_sidebar">
+       <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+       <li><a href="index.html">01. Home</a></li>
+       <li><a href="pretest.html">02. Pre-test</i></a></li>
+       <li><a href="discussion.html">03. Discussion</a></li>
+       <li><a href="firstlaw.html">04. First Law</a></li>
+       <li><a href="summary.html">05. Summary</a></li>
+       <li><a href="posttest.html">06. Post-Test</a></li>
+    </ul>
+ </div>
+ <header class="header">
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="full">
+            <!-- Hamburger icon as text (using ☰) -->
+            <span class="toggle_icon" onclick="openNav()">
+              ☰
+              <!-- Hamburger icon using the ☰ symbol -->
+            </span>
+            <div class="">
+              <a href="index.html">
+                <span class="logo-text-new">HEAT AND WORK</span>
+              </a>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
-   </header>
+    </div>
+  </div>
+</header>
    <!-- end header -->
    <!-- Start Banner Slider -->
    <div id="inner_pade" class="banner-slider">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12">
-               <div class="full">
-                  <h2>Post-Test</h2>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+    <div class="full">
+      <h2>Post-Test</h2>
+      <a href="#posttest" class="scroll-down-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  </div>
    <!-- End Banner Slider -->
    <!-- section -->
-   <section class="layout_padding posttest_section">
+   <section class="layout_padding pretest_section" id="posttest">
     <div class="container">
-        <!-- Question 1 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/energyintransit.jpg" alt="Energy in transit illustration" class="img-fluid quiz-image">
+        <div class="col-md-12">
+            <div class="full heading_s1">
+              <h3>Post-Test</h3>
+              <p style="padding-left: 50px">
+                <strong> ‣ </strong>Now it’s time to measure what you've learned about heat and work in thermodynamic systems.
+              </p>
+            </div>
+            <br />
+            <hr />
+          </div>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/energyintransit.jpg" alt="Energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">1. What is energy in transit called?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a" required> a. Thermodynamics</label><br>
+                            <label><input type="radio" name="q1" value="b"> b. Temperature</label><br>
+                            <label><input type="radio" name="q1" value="c"> c. Heat</label><br>
+                            <label><input type="radio" name="q1" value="d"> d. Work</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">1. What is energy in transit called?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Thermodynamics</li>
-                        <li>b. Temperature</li>
-                        <li>c. Heat</li>
-                        <li>d. Work</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 2 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/si.jpg" alt="Work units illustration" class="img-fluid quiz-image">
+            <!-- Question 2 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/si.jpg" alt="Work illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">2. Which represents the SI unit for work?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q2" value="a" required> a. Newton</label><br>
+                            <label><input type="radio" name="q2" value="b"> b. Watts</label><br>
+                            <label><input type="radio" name="q2" value="c"> c. Calorie</label><br>
+                            <label><input type="radio" name="q2" value="d"> d. Joule</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">2. Which represents the SI unit for work?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Newton</li>
-                        <li>b. Watts</li>
-                        <li>c. Calorie</li>
-                        <li>d. Joule</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 3 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/sum.jpg" alt="Energy sum illustration" class="img-fluid quiz-image">
+            <!-- Question 3 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/sum.jpg" alt="Energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">3. What refers to the sum of all kinetic and potential energies in the system?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q3" value="a" required> a. Gravitational energy</label><br>
+                            <label><input type="radio" name="q3" value="b"> b. Mechanical energy</label><br>
+                            <label><input type="radio" name="q3" value="c"> c. Nuclear energy</label><br>
+                            <label><input type="radio" name="q3" value="d"> d. Electrical energy</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">3. What refers to the sum of all kinetic and potential energies in the system?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Gravitational energy</li>
-                        <li>b. Mechanical energy</li>
-                        <li>c. Nuclear energy</li>
-                        <li>d. Electrical energy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 4 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/conversion.jpg" alt="Thermodynamics illustration" class="img-fluid quiz-image">
+            <!-- Question 4 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/conversion.jpg" alt="Thermodynamics illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">4. Which refers to the study of conversions between thermal energy and other forms of energy?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q4" value="a" required> a. Thermal energy</label><br>
+                            <label><input type="radio" name="q4" value="b"> b. Thermal expansion</label><br>
+                            <label><input type="radio" name="q4" value="c"> c. Thermodynamics</label><br>
+                            <label><input type="radio" name="q4" value="d"> d. Thermometer</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">4. Which refers to the study of conversions between thermal energy and other forms of energy?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Thermal energy</li>
-                        <li>b. Thermal expansion</li>
-                        <li>c. Thermodynamics</li>
-                        <li>d. Thermometer</li>
-                    </ul>
+    
+            <!-- Question 5 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/measure.jpg" alt="Temperature illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">5. What is a measure of how hot or cold an object is compared to a reference point?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q5" value="a" required> a. Temperature</label><br>
+                            <label><input type="radio" name="q5" value="b"> b. Conductor</label><br>
+                            <label><input type="radio" name="q5" value="c"> c. Thermometer</label><br>
+                            <label><input type="radio" name="q5" value="d"> d. Thermodynamics</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Question 5 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/measure.jpg" alt="Temperature illustration" class="img-fluid quiz-image">
+            <!-- Question 6 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/internalenergychanged.jpg" alt="Thermodynamics law illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">6. A system's internal energy can be changed by transferring energy by either work, heat, or a combination of the two. What Law explains the system?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q6" value="a" required> a. Law of heat</label><br>
+                            <label><input type="radio" name="q6" value="b"> b. First law of thermodynamics</label><br>
+                            <label><input type="radio" name="q6" value="c"> c. Second law of thermodynamics</label><br>
+                            <label><input type="radio" name="q6" value="d"> d. Internal energy law</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">5. What is a measure of how hot or cold an object is compared to a reference point?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Temperature</li>
-                        <li>b. Conductor</li>
-                        <li>c. Thermometer</li>
-                        <li>d. Thermodynamics</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 6 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/internalenergy.jpg" alt="Thermodynamics law illustration" class="img-fluid quiz-image">
+            <!-- Question 7 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/sumofkiniticandpotentialenergy.jpg" alt="Particle energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">7. Which refers to the sum of kinetic and potential energies of its particles and their interactions?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q7" value="a" required> a. Mechanical energy</label><br>
+                            <label><input type="radio" name="q7" value="b"> b. Internal energy</label><br>
+                            <label><input type="radio" name="q7" value="c"> c. External energy</label><br>
+                            <label><input type="radio" name="q7" value="d"> d. Heat energy</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">6. A system's internal energy can be changed by transferring energy by either work, heat, or a combination of the two. What Law explains the system?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Law of heat</li>
-                        <li>b. First law of thermodynamics</li>
-                        <li>c. Second law of thermodynamics</li>
-                        <li>d. Internal energy law</li>
-                    </ul>
+    
+            <!-- Question 8 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/objectgainenergy.jpg" alt="Work energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">8. When the work is done upon the object, that object gains energy. What type of energy is acquired by the objects upon which work is done?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q8" value="a" required> a. Electrical energy</label><br>
+                            <label><input type="radio" name="q8" value="b"> b. Heat energy</label><br>
+                            <label><input type="radio" name="q8" value="c"> c. Mechanical energy</label><br>
+                            <label><input type="radio" name="q8" value="d"> d. Work energy</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Question 7 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/sumofkiniticandpotentialenergy.jpg" alt="Particle energy illustration" class="img-fluid quiz-image">
+            <!-- Question 9 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/metabolizing.jpg" alt="Body energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">9. Heat is added in our body by metabolizing food, and our body does work in breathing, walking, and other activities. If we return in the same state at the end of the day, how will you describe the work and heat of our body?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q9" value="a" required> a. The amount of heat is equal to the work done</label><br>
+                            <label><input type="radio" name="q9" value="b"> b. Internal energy is zero</label><br>
+                            <label><input type="radio" name="q9" value="c"> c. Both a and b</label><br>
+                            <label><input type="radio" name="q9" value="d"> d. Work done is greater than the heat added.</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">7. Which refers to the sum of kinetic and potential energies of its particles and their interactions?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Mechanical energy</li>
-                        <li>b. Internal energy</li>
-                        <li>c. External energy</li>
-                        <li>d. Heat energy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 8 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/objectgainenergy.jpg" alt="Work energy illustration" class="img-fluid quiz-image">
+            <!-- Question 10 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/internalenergy.jpg" alt="Internal energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">10. What happens to internal energy when both heat transfer (Q) and work done (W) are equal?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q10" value="a" required> a. The internal energy is equal to the difference of heat and work. Increases</label><br>
+                            <label><input type="radio" name="q10" value="b"> b. The internal energy is equal to the sum of heat and work. Decreases</label><br>
+                            <label><input type="radio" name="q10" value="c"> c. The internal energy remains the same.</label><br>
+                            <label><input type="radio" name="q10" value="d"> d. The internal energy has no net charge is not affected</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">8. When the work is done upon the object, that object gains energy. What type of energy is acquired by the objects upon which work is done?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Electrical energy</li>
-                        <li>b. Heat energy</li>
-                        <li>c. Mechanical energy</li>
-                        <li>d. Work energy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 9 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/metabolizing.jpg" alt="Body energy illustration" class="img-fluid quiz-image">
+            <!-- Question 11 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/example.jpg" alt="Work conversion illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">11. Which of the following is an example of work converted into heat?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q11" value="a" required> a. Heat engine</label><br>
+                            <label><input type="radio" name="q11" value="b"> b. Hand rubbing</label><br>
+                            <label><input type="radio" name="q11" value="c"> c. Gas stove</label><br>
+                            <label><input type="radio" name="q11" value="d"> d. Hot air balloon</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">9. Heat is added in our body by metabolizing food, and our body does work in breathing, walking, and other activities. If we return in the same state at the end of the day, how will you describe the work and heat of our body?</h3>
-                    <ul class="quiz-options">
-                        <li>a. The amount of heat is equal to the work done</li>
-                        <li>b. Internal energy is zero</li>
-                        <li>c. Both a and b</li>
-                        <li>d. Work done is greater than the heat added</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 10 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="assets/images/pretest/internalenergychanged.jpg" alt="Internal energy illustration" class="img-fluid quiz-image">
+            <!-- Question 12 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/balloonheated.jpg" alt="Balloon molecules illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">12. What happens to the molecules in the balloons when heated?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q12" value="a" required> a. Molecules collide into the balloon with more energy</label><br>
+                            <label><input type="radio" name="q12" value="b"> b. Molecules freeze into the balloon with less energy</label><br>
+                            <label><input type="radio" name="q12" value="c"> c. Molecules collide into the balloon with less energy</label><br>
+                            <label><input type="radio" name="q12" value="d"> d. Molecules freeze into the balloon with no energy</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">10. What happens to internal energy when both heat transfer (Q) and work done (W) are equal?</h3>
-                    <ul class="quiz-options">
-                        <li>a. The internal energy is equal to the difference of heat and work. Increases</li>
-                        <li>b. The internal energy is equal to the sum of heat and work. Decreases</li>
-                        <li>c. The internal energy remains the same</li>
-                        <li>d. The internal energy has no net charge. Is not affected</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 11 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="images/pt_11.png" alt="Work conversion illustration" class="img-fluid quiz-image">
+            <!-- Question 13 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/net.jpg" alt="Internal energy change illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">13. What is the net change in internal energy (ΔU) if the amount of work done (W) is the same as the amount of energy transferred in by heat (Q)?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q13" value="a" required> a. The net internal energy is zero.</label><br>
+                            <label><input type="radio" name="q13" value="b"> b. The net internal energy is 1.</label><br>
+                            <label><input type="radio" name="q13" value="c"> c. The net internal energy is 100.</label><br>
+                            <label><input type="radio" name="q13" value="d"> d. The net internal energy cannot be determined.</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">11. Which of the following is an example of work converted into heat?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Heat engine</li>
-                        <li>b. Hand rubbing</li>
-                        <li>c. Gas stove</li>
-                        <li>d. Hot air balloon</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Question 12 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="images/pt_12.png" alt="Balloon molecules illustration" class="img-fluid quiz-image">
+            <!-- Question 14 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/heatandwork.jpg" alt="System energy illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">14. How does heat and work affect a system?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q14" value="a" required> a. Heat and work both contribute to the total internal energy of a system</label><br>
+                            <label><input type="radio" name="q14" value="b"> b. Heat and work do not affect the total internal energy of a system</label><br>
+                            <label><input type="radio" name="q14" value="c"> c. Without heat and work, there will be no internal energy of the system</label><br>
+                            <label><input type="radio" name="q14" value="d"> d. Heat and work affect the system in a negligible impact</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">12. What happens to the molecules in the balloons when heated?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Molecules collide into the balloon with more energy</li>
-                        <li>b. Molecules freeze into the balloon with less energy</li>
-                        <li>c. Molecules collide into the balloon with less energy</li>
-                        <li>d. Molecules freeze into the balloon with no energy</li>
-                    </ul>
+    
+            <!-- Question 15 -->
+            <div class="row align-items-center question-row">
+                <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/pretest/notcorrect.jpg" alt="Heat and work illustration" class="img-fluid quiz-image">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
+                    <div class="quiz-content">
+                        <h3 class="quiz-question">15. Which of the following is NOT correct?</h3>
+                        <div class="validation-message text-danger"></div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q15" value="a" required> a. Heat and work are related.</label><br>
+                            <label><input type="radio" name="q15" value="b"> b. Work is measured in joules.</label><br>
+                            <label><input type="radio" name="q15" value="c"> c. Heat cannot be completely converted into work.</label><br>
+                            <label><input type="radio" name="q15" value="d"> d. Heat is a form of energy.</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Question 13 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="images/pt_13.png" alt="Energy change illustration" class="img-fluid quiz-image">
+            
+            <div class="text-center mt-4">
+                <button type="button" id="submitQuiz" class="learning-activities-btn">Submit Answers</button>
+                <div id="globalError" class="text-danger mt-3" style="display: none;">
+                  Please answer all questions before submitting.
                 </div>
-            </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">13. What is the net change in internal energy (ΔU) if the amount of work done (W) is the same as the amount of energy transferred in by heat (Q)?</h3>
-                    <ul class="quiz-options">
-                        <li>a. The net internal energy is zero</li>
-                        <li>b. The net internal energy is 1</li>
-                        <li>c. The net internal energy is 100</li>
-                        <li>d. The net internal energy cannot be determined</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Question 14 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-2 order-lg-2 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="images/pt_14.png" alt="System energy illustration" class="img-fluid quiz-image">
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-1 order-lg-1">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">14. How does heat and work affect a system?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Heat and work both contribute to the total internal energy of a system</li>
-                        <li>b. Heat and work do not affect the total internal energy of a system</li>
-                        <li>c. Without heat and work, there will be no internal energy of the system</li>
-                        <li>d. Heat and work affect the system in a negligible impact</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Question 15 -->
-        <div class="row align-items-center question-row">
-            <div class="col-lg-7 col-md-6 order-1 order-md-1 order-lg-1 mb-4 mb-md-0">
-                <div class="text-center">
-                    <img src="images/pt_15.png" alt="Heat concepts illustration" class="img-fluid quiz-image">
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 order-2 order-md-2 order-lg-2">
-                <div class="quiz-content">
-                    <h3 class="quiz-question">15. Which of the following is NOT correct?</h3>
-                    <ul class="quiz-options">
-                        <li>a. Heat and work are related</li>
-                        <li>b. Work is measured in joules</li>
-                        <li>c. Heat cannot be completely converted into work</li>
-                        <li>d. Heat is a form of energy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+              </div>      
+        </form>
     </div>
 </section>
+
+<!-- Score Modal -->
+    <div id="scoreModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Quiz Results</h2>
+      <p>You scored <span id="modalScore">0</span> out of 15</p>
+      <p>That's <span id="modalPercent">0</span>%</p>
+      <div id="scoreMessage"></div>
+    </div>
+  </div>
+
+  <script src="js/posttestJs.js"></script>
 
    <!-- end section -->
    <!-- jQuery (necessary for Bootstrap's JavaScript) -->
