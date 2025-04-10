@@ -118,3 +118,140 @@
     font-size: 12px;
   }
 }
+
+.heat-work-section {
+  max-width: 1200px;
+  width: 95%;
+  margin: 2rem auto;
+  padding: 2rem 3rem;
+  line-height: 1.8;
+}
+
+.heat-work-section h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+
+.heat-work-section .intro {
+  margin-bottom: 2rem;
+  font-size: 1.2em;
+  color: #333;
+  text-align: justify;
+}
+
+.heat-work-section .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.heat-work-section .image-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.heat-work-section .image-container img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.heat-work-section .text-container {
+  flex: 1;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.heat-work-section .text-container p {
+  margin-bottom: 1.2rem;
+}
+
+.heat-work-section .examples {
+  margin-top: 3rem;
+}
+
+.heat-work-section .examples h3 {
+  font-size: 1.8em;
+  margin-bottom: 1.2rem;
+  color: #000;
+}
+
+.heat-work-section .examples ul {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.heat-work-section .examples ul li {
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1.2em;
+  color: #000;
+  text-align: justify;
+}
+
+.heat-work-section .examples ul li::before {
+  content: "‣";
+  position: absolute;
+  left: 0;
+  font-size: 1.5em;
+  line-height: 1;
+  color: #000;
+}
+
+.heat-work-section .internal-energy p {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.ending-message {
+  font-size: 1.3em;
+  color: #000;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .heat-work-section {
+    width: 90%;
+    padding: 1.5rem 2rem;
+  }
+
+  .heat-work-section h2 {
+    font-size: 2em;
+  }
+
+  .heat-work-section p {
+    font-size: 1.1rem;
+  }
+
+  .heat-work-section .content-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heat-work-section {
+    width: 90%;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .heat-work-section h2 {
+    font-size: 1.8em;
+  }
+
+  .heat-work-section p {
+    font-size: 1rem;
+  }
+}

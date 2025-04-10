@@ -1,0 +1,178 @@
+.summary-section {
+  max-width: 1200px; /* Increased width */
+  width: 95%; /* Adjusted width */
+  margin: 2rem auto;
+  padding: 3rem 3rem;
+  line-height: 1.8; /* Adjusted line-height for better readability */
+}
+
+.summary-section h2 {
+  font-size: 2.2em; /* Increased font size */
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.5px;
+  color: #000; /* Black text color */
+}
+
+.summary-section p {
+  font-size: 1.2em; /* Increased font size for introduction and conclusion */
+  color: #000; /* Black text color */
+  margin-bottom: 2rem;
+  text-align: justify; /* Justified text */
+}
+
+.summary-list {
+  list-style-type: none;
+  padding-left: 2rem; /* Added left padding */
+  margin: 0 0 2rem 0;
+  font-size: 1.3rem; /* Increased font size */
+  color: #000; /* Black text color */
+  text-align: justify; /* Justified text */
+}
+
+.summary-list li {
+  margin-bottom: 1.2rem;
+  padding-left: 2rem; /* Adjusted padding */
+  position: relative;
+}
+
+.summary-list li::before {
+  content: "‣"; /* Changed bullet to ‣ */
+  position: absolute;
+  left: 0;
+  font-size: 2em; /* Increased bullet size */
+  line-height: 1;
+  color: #000; /* Black bullet color */
+}
+
+.sign-convention {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.sign-convention h3 {
+  font-size: 1.7em; /* Increased font size */
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #000; /* Black text color */
+}
+
+.sign-convention-list {
+  list-style-type: none;
+  padding-left: 2rem; /* Added left padding */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem; /* Adjusted gap */
+  font-size: 1.3rem; /* Increased font size */
+  color: #000; /* Black text color */
+  text-align: justify; /* Justified text */
+}
+
+.sign-convention-list li {
+  padding-left: 2rem;
+  position: relative;
+}
+
+.sign-convention-list li::before {
+  content: "‣"; /* Changed bullet to ‣ */
+  position: absolute;
+  left: 0;
+  color: #000; /* Black bullet color */
+  font-size: 1.8em; /* Increased bullet size */
+}
+
+.keyword {
+  font-weight: 600;
+}
+
+.ending-message {
+  font-size: 1.3em; /* Increased font size */
+  color: #000;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 1200px) {
+  .summary-section {
+    width: 90%;
+    padding: 1.5rem 2rem;
+  }
+
+  .summary-section h2 {
+    font-size: 2em;
+  }
+
+  .summary-section p,
+  .summary-list {
+    font-size: 1.2rem;
+  }
+
+  .summary-list li {
+    font-size: 1.2rem;
+  }
+
+  .sign-convention h3 {
+    font-size: 1.5em;
+  }
+
+  .sign-convention-list {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-section {
+    width: 90%;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .summary-section h2 {
+    font-size: 1.8em;
+  }
+
+  .summary-section p,
+  .summary-list {
+    font-size: 1.1rem;
+  }
+
+  .summary-list li {
+    font-size: 1.1rem;
+  }
+
+  .sign-convention h3 {
+    font-size: 1.4em;
+  }
+
+  .sign-convention-list {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-section {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .summary-section h2 {
+    font-size: 1.6em;
+  }
+
+  .summary-section p,
+  .summary-list {
+    font-size: 1rem;
+  }
+
+  .summary-list li {
+    font-size: 1rem;
+  }
+
+  .sign-convention h3 {
+    font-size: 1.3em;
+  }
+
+  .sign-convention-list {
+    font-size: 1rem;
+  }
+}
