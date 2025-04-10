@@ -66,6 +66,8 @@ function checkAnswers() {
     q15: "a",
   };
 
+  let score = 0;
+
   // Process each question
   for (let i = 1; i <= 15; i++) {
     const questionName = "q" + i;
@@ -73,6 +75,11 @@ function checkAnswers() {
       `input[name="${questionName}"]:checked`
     );
     const correctOptionValue = correctAnswers[questionName];
+
+    // Check if answer is correct
+    if (selectedOption && selectedOption.value === correctOptionValue) {
+      score++;
+    }
 
     // Highlight all options for this question
     const allOptions = document.querySelectorAll(
@@ -99,6 +106,47 @@ function checkAnswers() {
       }
     });
   }
+
+  // Get modal elements
+  const modal = document.getElementById("scoreModal");
+  const modalScore = document.getElementById("modalScore");
+  const modalPercent = document.getElementById("modalPercent");
+  const scoreMessage = document.getElementById("scoreMessage");
+
+  // Set score values
+  modalScore.textContent = score;
+  const percentage = Math.round((score / 15) * 100);
+  modalPercent.textContent = percentage;
+
+  // Set custom message based on score
+  if (score === 15) {
+    scoreMessage.textContent = "Perfect! You're a quiz master! 🎉";
+    scoreMessage.style.color = "#27ae60";
+    scoreMessage.style.backgroundColor = "#e8f5e9";
+  } else if (score >= 10) {
+    scoreMessage.textContent = "Great job! You know your stuff! 👍";
+    scoreMessage.style.color = "#f39c12";
+    scoreMessage.style.backgroundColor = "#fff8e1";
+  } else {
+    scoreMessage.textContent = "Keep practicing! You'll get better! 💪";
+    scoreMessage.style.color = "#e74c3c";
+    scoreMessage.style.backgroundColor = "#ffebee";
+  }
+
+  // Show modal
+  modal.style.display = "block";
+
+  // Close modal when clicking X
+  document.querySelector(".close").onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Close modal when clicking outside
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
 // Clear validation when an option is selected

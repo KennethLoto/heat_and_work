@@ -1,8 +1,3 @@
-/* Base styles */
-.pretest_section {
-  padding: 50px 0;
-}
-
 .question-row {
   margin-bottom: 60px;
 }
@@ -31,9 +26,14 @@
 }
 
 .quiz-image {
-  max-width: 100%;
-  height: auto;
-  padding: 0 15px;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -70,6 +70,11 @@
     line-height: 1.6;
   }
 
+  .quiz-image {
+    height: 200px;
+    max-width: 100%;
+  }
+
   /* Force mobile stacking */
   [class*="col-"] {
     flex: 0 0 100%;
@@ -86,9 +91,11 @@
   color: green;
   font-weight: bold;
 }
+
 .incorrect-answer {
   color: red;
 }
+
 .validation-message {
   display: none;
   margin-bottom: 10px;
@@ -96,6 +103,7 @@
   margin-top: 5px;
   color: #dc3545; /* Bootstrap danger color */
 }
+
 input:invalid {
   border-color: #dc3545; /* Red outline for invalid radios */
 }
@@ -103,18 +111,84 @@ input:invalid {
 .learning-activities-btn {
   background: transparent;
   color: #000;
-  border: 1px solid #000; /* Thinner border */
-  font-size: 14px; /* Smaller font size */
-  border-radius: 5px; /* Tighter corners */
+  border: 1px solid #000;
+  font-size: 14px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  height: 50px; /* Fixed height */
+  height: 50px;
+  padding: 0 30px;
+  margin-top: 20px;
 }
 
 .learning-activities-btn:hover {
-  background: #000; /* Black background on hover */
-  color: #fff; /* White text on hover */
+  background: #000;
+  color: #fff;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: modalopen 0.4s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  /* Remove float and position it absolutely instead */
+  position: relative;
+  margin-left: auto; /* Pushes it to the right */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close:hover {
+  color: #333;
+}
+
+#scoreMessage {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
 }
