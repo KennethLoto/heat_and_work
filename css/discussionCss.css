@@ -321,3 +321,29 @@ video {
     font-size: 1.1rem;
   }
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.activity-link {
+  padding: 12px 35px; /* Slightly increased padding */
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-weight: 500; /* Makes text slightly bolder */
+  text-align: center;
+  display: inline-block; /* Ensures proper button behavior */
+}
+
+.activity-link:hover {
+  color: white;
+  background-color: black;
+  transform: translateY(-2px); /* Adds slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}

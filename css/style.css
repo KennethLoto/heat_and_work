@@ -869,12 +869,6 @@ section .small_head h2 {
   margin-left: 100px;
 }
 
-.header_top {
-  min-height: 50px;
-  padding: 30px 0 30px;
-  border-bottom: solid rgba(255, 255, 255, 0.1) 1px;
-}
-
 .fix_header {
   position: absolute;
   top: 0;
@@ -896,37 +890,20 @@ section .small_head h2 {
 }
 
 .logo img {
-  width: 210px;
-}
-
-.logo-text-new {
-  color: white; /* White text color */
-  font-size: 25px; /* Adjust size as needed */
-  font-weight: bold; /* Optional for bold text */
-  text-transform: uppercase; /* Convert text to uppercase */
-  margin-bottom: 0; /* Remove extra margin */
-  padding-left: 10px; /* Adjusted padding */
-  transition: color 0.3s ease; /* Add transition for hover effect */
-}
-
-/* Hover effect for logo */
-.logo-text-new:hover {
-  color: #f0f0f0; /* Lighter color on hover */
+  width: 100px;
 }
 
 /* Hamburger menu */
 .toggle_icon {
-  font-size: 30px; /* Size of text-based hamburger icon */
+  font-size: 30px;
   cursor: pointer;
-  display: block; /* Make the hamburger icon always visible */
-  color: white; /* White color for the hamburger icon */
-  transition: color 0.3s ease; /* Smooth color transition */
-  margin-right: 10px; /* Reduced gap between icon and logo */
+  display: block;
+  color: white;
+  transition: 0.3s ease-out;
 }
 
-/* Hover effect for hamburger icon */
 .toggle_icon:hover {
-  color: #f0f0f0; /* Lighter white when hovering */
+  color: black; /* slightly lighter black on hover */
 }
 
 /* Mobile navigation (hidden by default) */
@@ -1056,7 +1033,7 @@ section .small_head h2 {
 }
 
 .sidenav a:hover {
-  color: #fafba4;
+  color: #ff6b6b;
 }
 
 .sidenav .closebtn {
@@ -1448,129 +1425,162 @@ section .social_icons {
   height: 100vh !important;
 }
 
+/* Banner Slider - Hero Section */
 .banner-slider {
-  height: auto;
-  background-image: url("../assets/images/heatandwork.jpg");
-  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-image: url("../assets/images/hero.gif");
   background-size: cover;
-  background-position: top center;
-  padding: 94px 0 0 0;
-  position: relative;
+  background-position: center;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
 }
 
-/* Enable smooth scroll */
+/* Content Container - Now Perfectly Centered */
+.left_blog_top {
+  max-width: 815px;
+  width: 90%;
+  padding: 40px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+  border-radius: 15px;
+  margin: 0 auto; /* Ensures perfect centering */
+}
+
+/* Main Headline - Always visible, scales down properly */
+.left_blog_top h3 {
+  color: white;
+  font-family: "Righteous", cursive;
+  font-weight: normal;
+  margin: 0 auto; /* Centered */
+  line-height: 1;
+  width: fit-content; /* Allows text to shrink */
+
+  /* Fluid typography that always shows full text */
+  font-size: clamp(32px, 8vw, 80px);
+
+  /* Fallback for browsers that don't support clamp */
+  font-size: -webkit-calc(32px + (80 - 32) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(32px + (80 - 32) * ((100vw - 320px) / (1600 - 320)));
+}
+
+/* Subheading */
+.left_blog_top p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin: 20px auto;
+
+  /* Fluid typography */
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+/* CTA Button */
+/* Add this to your existing CSS */
 html {
   scroll-behavior: smooth;
 }
 
-.left_blog_top {
-  background: rgba(255, 255, 255, 0); /* Fully transparent background */
-  width: 815px;
-  height: 75vh; /* Maintain 75vh height on all screen sizes */
-  top: 0;
-  left: 0;
-  z-index: 9;
-  position: relative; /* To maintain its positioning */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  margin: 0 auto; /* To center the container horizontally */
-  border-radius: 15px; /* Optional: rounded corners */
-  text-align: center; /* Center the text */
-  padding: 20px; /* Add padding for better spacing */
-}
-
-.left_blog_top h3 {
-  font-size: 80px; /* Large font size for big screens */
-  color: white; /* Changed text color to white */
-  font-family: "Righteous", cursive;
-  line-height: 95px;
-  font-weight: normal;
-}
-
-.left_blog_top p {
-  color: white; /* Changed text color to white */
-  font-size: 17px; /* Larger font size for bigger screens */
-  text-transform: uppercase;
-  line-height: normal;
-  margin-top: 40px;
-  margin-bottom: 60px;
-}
-
-/* CTA Button */
+/* Update your button styles */
 .cta-button {
+  /* Your existing button styles */
   background: transparent;
   color: white;
   border: 2px solid white;
-  padding: 14px 30px;
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 40px);
+  font-size: clamp(14px, 1.5vw, 18px);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   font-weight: 600;
-  min-width: 200px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px; /* Default margin at bottom */
+  font-family: "Montserrat", sans-serif;
+  min-width: 180px;
+  display: inline-block;
+  margin: 10px 0;
+
+  /* Add these to ensure smooth behavior */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
+/* Add this hover effect */
 .cta-button:hover {
   background: white;
   color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Media query for tablet and smaller screens */
+/* Add this ripple effect (optional but nice) */
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+  z-index: -1;
+}
+
+.cta-button:focus:not(:active)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .banner-slider {
+    min-height: 500px;
+    background-attachment: scroll;
+  }
+
   .left_blog_top {
-    width: 90%; /* Adjust width to fit smaller screens */
-    height: 75vh; /* Maintain 75vh height on tablet */
-    padding: 15px; /* Add padding for spacing */
+    padding: 30px;
+    width: 95%;
   }
 
   .left_blog_top h3 {
-    font-size: 50px; /* Smaller font size for tablet screens */
-    line-height: 60px; /* Adjust line-height for readability */
-  }
-
-  .left_blog_top p {
-    font-size: 14px; /* Smaller font size for readability */
-    margin-top: 15px; /* Reduce margin-top */
-    margin-bottom: 30px; /* Reduce margin-bottom */
-  }
-
-  .cta-button {
-    font-size: 14px; /* Smaller button font size */
-    padding: 12px 24px; /* Smaller padding */
-    margin-bottom: 15px; /* Smaller bottom margin */
+    /* Adjusted scaling for mid-size screens */
+    font-size: clamp(36px, 9vw, 60px);
   }
 }
 
-/* Media query for small screens */
 @media (max-width: 480px) {
   .left_blog_top {
-    width: 90%; /* Adjust width to fit very small screens */
-    height: 75vh; /* Maintain 75vh height on mobile */
-    padding: 10px; /* Add padding for spacing */
+    padding: 25px 20px;
   }
 
   .left_blog_top h3 {
-    font-size: 40px; /* Even smaller font size for small screens */
-    line-height: 50px; /* Adjust line-height for readability */
-  }
-
-  .left_blog_top p {
-    font-size: 12px; /* Even smaller font size */
-    margin-top: 10px; /* Reduce margin-top */
-    margin-bottom: 20px; /* Reduce margin-bottom */
+    /* Minimum size ensures full visibility */
+    font-size: clamp(28px, 10vw, 36px);
   }
 
   .cta-button {
-    font-size: 12px; /* Smaller button font size */
-    padding: 10px 20px; /* Smaller padding */
-    margin-bottom: 10px; /* Smaller bottom margin */
+    min-width: 160px;
   }
 }
 
@@ -3215,33 +3225,6 @@ section .social_icons li {
   .header_style4 .main_menu {
     margin-right: 16%;
   }
-}
-
-.header_top {
-  min-height: 50px;
-  padding: 35px 0 35px;
-}
-
-.header_top p {
-  font-size: 14px;
-  margin: 0 15px 0 0;
-  font-weight: 500;
-  float: left;
-}
-
-.header_top p a {
-  color: #173243;
-}
-
-.header_top p i {
-  background: #4ca8b3;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  color: #fff;
-  line-height: 30px;
-  border-radius: 100px;
-  margin-right: 2px;
 }
 
 .top_style,
@@ -8736,12 +8719,10 @@ img[data-toggle="modal"] {
 }
 
 .heading_s1 h3 {
-  font-size: 52px;
-  color: #3d3d3c;
-  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: black;
+  font-family: "Righteous", cursive;
   text-transform: uppercase;
-  font-weight: 700;
-  line-height: 52px;
   margin-bottom: 40px;
 }
 
@@ -9047,10 +9028,10 @@ form button:focus {
 }
 
 #inner_pade.banner-slider {
-  height: 90vh;
+  height: 50vh;
   min-height: 500px; /* Prevent too small on mobile */
   max-height: 1200px; /* Prevent too tall on large screens */
-  background-image: url("../assets/images/heatandwork.jpg");
+  background-image: url("../assets/images/hero.gif");
   width: 100%;
   background-size: cover;
   background-position: center center;

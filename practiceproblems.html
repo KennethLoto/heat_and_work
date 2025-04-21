@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Summary</title>
+      <title>Practice Problems</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -36,7 +36,9 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.css">
 
-      <link rel="stylesheet" href="css/summaryCss.css">
+      <link rel="stylesheet" href="css/practiceproblemsCss.css">
+
+      <link rel="stylesheet" href="css/activity.css">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -69,7 +71,7 @@
                   </span>
                   <div class="logo">
                     <a href="index.html">
-                        <img
+                      <img
                         class="logo"
                         src="assets/images/logo/logo.png"
                         alt=""
@@ -86,8 +88,8 @@
       <!-- Start Banner Slider -->
       <div id="inner_pade" class="banner-slider">
         <div class="full">
-          <h2>Summary</h2>
-          <a href="#summary" class="scroll-down-btn">
+          <h2>Practice Problems</h2>
+          <a href="#practice_problems" class="scroll-down-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -96,52 +98,93 @@
       </div>
       <!-- End Banner Slider -->
     
-    <section class="summary-section" id="summary">
-        <div class="row">
-            <div class="col-md-12">
-              <div class="full heading_s1">
-                <h3>Summary</h3>
-                <p style="padding-left: 50px">
-                  <strong> ‣ </strong>This section covers key concepts encountered during your study of thermodynamics. It provides an overview of important principles and sign conventions that will help you in understanding how energy, heat, and work interact in thermodynamic systems.
-                </p>
-              </div>
-              <br />
-              <hr />
+      <section class="practice-section" id="practice_problems">
+        <h2>Practice Problems: Applying the First Law of Thermodynamics</h2>
+    
+        <div class="problem">
+          <div class="problem-content">
+            <h3>Problem 1: No Work Done</h3>
+            <div class="given-section">
+              <p><strong>Given:</strong><br>Heat added: Q = +600 J<br>No work is done: W = 0 J</p>
+            </div>
+            <div class="steps-section">
+              <p><strong>Step-by-step:</strong></p>
+              <ol>
+                <li>Write the formula: ΔU = Q – W</li>
+                <li>Substitute the values: ΔU = 600 J – 0 J</li>
+                <li>Solve: ΔU = 600 J</li>
+              </ol>
             </div>
           </div>
-        <h2>Key Concepts</h2>
-    
-        <ul class="summary-list">
-            <li>Work is defined as energy transfer through means other than heat, measured in joules (J).</li>
-            <li>The first law of thermodynamics: ΔU = Q − W, where:
-                <ul class="sign-convention-list" style="margin: 0.8rem 0;">
-                    <li>ΔU = Internal energy change</li>
-                    <li>Q = Net heat transfer</li>
-                    <li>W = Net work done</li>
-                </ul>
-            </li>
-            <li>Internal energy remains constant (ΔU = 0) when work done equals heat transfer (W = Q).</li>
-            <li>Heat addition increases internal energy, while heat removal decreases it.</li>
-            <li>Thermal energy corresponds to molecular kinetic energy in random motion.</li>
-            <li>Temperature changes reflect average molecular kinetic energy variations.</li>
-            <li>Energy conservation: Transformable between forms but never created/destroyed.</li>
-        </ul>
-    
-        <div class="sign-convention">
-            <h3>Thermodynamic Sign Convention</h3>
-            <ul class="sign-convention-list">
-                <li><span class="keyword">Q > 0</span>: Heat input to system</li>
-                <li><span class="keyword">Q < 0</span>: Heat output from system</li>
-                <li><span class="keyword">W > 0</span>: Work performed by system</li>
-                <li><span class="keyword">W < 0</span>: Work applied to system</li>
-                <li><span class="keyword">ΔU > 0</span>: System energy increase</li>
-                <li><span class="keyword">ΔU < 0</span>: System energy decrease</li>
-                <li><span class="keyword">ΔU = 0</span>: Energy equilibrium state</li>
-            </ul>
+          <div class="therefore">The internal energy increases by 600 J.</div>
         </div>
     
-        <p class="ending-message">Learning is a continuous journey. Keep exploring, practicing, and deepening your understanding of thermodynamics. The concepts covered here are just the beginning of your studies in this fascinating field!</p>
-    </section>
+        <div class="problem">
+          <div class="problem-content">
+            <h3>Problem 2: System Does More Work Than Heat Added</h3>
+            <div class="given-section">
+              <p><strong>Given:</strong><br>Heat added: Q = 300 J<br>Work done by system: W = 400 J</p>
+            </div>
+            <div class="steps-section">
+              <ol>
+                <li>Formula: ΔU = Q – W</li>
+                <li>Substitute: ΔU = 300 J – 400 J</li>
+                <li>Solve: ΔU = -100 J</li>
+              </ol>
+            </div>
+          </div>
+          <div class="therefore">The system loses 100 J of internal energy.</div>
+        </div>
+    
+        <div class="problem">
+          <div class="problem-content">
+            <h3>Problem 3: Heat Removed, Work Done On the System</h3>
+            <div class="given-section">
+              <p><strong>Given:</strong><br>Q = -250 J, W = -150 J</p>
+            </div>
+            <div class="steps-section">
+              <ol>
+                <li>Formula: ΔU = Q – W</li>
+                <li>Substitute: ΔU = -250 J – (-150 J)</li>
+                <li>ΔU = -250 J + 150 J = -100 J</li>
+              </ol>
+            </div>
+          </div>
+          <div class="therefore">Internal energy still drops by 100 J.</div>
+        </div>
+    
+        <div class="problem">
+          <div class="problem-content">
+            <h3>Problem 4: Cooling a Gas</h3>
+            <div class="given-section">
+              <p><strong>Given:</strong><br>Q = -400 J, W = 100 J</p>
+            </div>
+            <div class="steps-section">
+              <ol>
+                <li>ΔU = Q – W</li>
+                <li>ΔU = -400 J – 100 J</li>
+                <li>ΔU = -500 J</li>
+              </ol>
+            </div>
+          </div>
+          <div class="therefore">The gas's internal energy decreases by 500 J.</div>
+        </div>
+    
+        <div class="problem">
+          <div class="problem-content">
+            <h3>Problem 5: Work Done on Gas</h3>
+            <div class="given-section">
+              <p><strong>Given:</strong><br>W = -300 J, Q = 0 J</p>
+            </div>
+            <div class="steps-section">
+              <p>ΔU = Q – W = 0 – (-300 J) = 300 J</p>
+            </div>
+          </div>
+          <div class="therefore">The internal energy increases by 300 J.</div>
+        </div>
+      </section>
+
+    <script src="js/activity.js"></script>
     
       <!-- end section -->
       <!-- jQuery (necessary for Bootstrap's JavaScript) -->

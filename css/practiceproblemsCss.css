@@ -1,0 +1,159 @@
+/* practiceproblemsCss.css */
+
+.practice-section {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  margin: 50px auto;
+  padding: 40px 30px;
+  line-height: 1.7;
+  color: #000;
+}
+
+.practice-section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px;
+}
+
+/* Default desktop layout (2 columns) */
+.problem {
+  margin-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.problem-content {
+  flex: 1;
+}
+
+.problem h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.given-section {
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.steps-section {
+  padding-left: 80px; /* Increased left padding for steps */
+}
+
+.problem p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.problem p strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.problem ol {
+  padding-left: 35px;
+  margin: 25px 0;
+}
+
+.problem ol li {
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.problem ol li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.therefore {
+  flex: 0 0 300px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 20px 20px 20px 40px;
+  border-left: 2px solid #000;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+/* Tablet layout (same as desktop) */
+@media (max-width: 1100px) {
+  .practice-section {
+    padding: 30px 20px;
+    max-width: 95%;
+  }
+
+  /* Keep 2-column layout for tablet */
+  .problem {
+    gap: 30px;
+  }
+
+  .therefore {
+    flex: 0 0 250px; /* Slightly narrower on tablet */
+    font-size: 20px;
+    padding: 15px 15px 15px 30px;
+  }
+
+  .practice-section h2 {
+    font-size: 28px;
+  }
+
+  .problem h3 {
+    font-size: 22px;
+  }
+
+  .problem p,
+  .problem ol li {
+    font-size: 18px;
+  }
+
+  .steps-section {
+    padding-left: 60px; /* Slightly reduced for tablet */
+  }
+}
+
+/* Mobile layout (stacked) */
+@media (max-width: 768px) {
+  .problem {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .therefore {
+    flex: 1;
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid #000;
+    padding: 15px 0 0 20px;
+    font-size: 20px;
+  }
+
+  .given-section,
+  .steps-section {
+    padding-left: 20px; /* Reduced padding for mobile */
+  }
+
+  .problem ol li {
+    padding-left: 35px;
+  }
+
+  .problem ol li:before {
+    top: 10px;
+    width: 8px;
+    height: 8px;
+  }
+}
