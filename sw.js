@@ -4,7 +4,17 @@ importScripts("/staticAssets.js");
 
 async function preCache() {
   const cache = await caches.open(CACHE_NAME);
-  return cache.addAll(STATIC_ASSETS);
+
+  // Try each asset individually and catch errors
+  const results = await Promise.allSettled(
+    STATIC_ASSETS.map((url) => cache.add(url))
+  );
+
+  results.forEach((result, index) => {
+    if (result.status === "rejected") {
+      console.error("❌ Failed to cache:", STATIC_ASSETS[index], result.reason);
+    }
+  });
 }
 
 self.addEventListener("install", (event) => {
@@ -15,18 +25,17 @@ self.addEventListener("install", (event) => {
 
 async function cleanupCache() {
   const keys = await caches.keys();
-  const keysToDelete = keys.map((key) => {
+  const deletePromises = keys.map((key) => {
     if (key !== CACHE_NAME) {
       return caches.delete(key);
     }
   });
-
-  return Promise.all(keysToDelete);
+  return Promise.all(deletePromises);
 }
 
 self.addEventListener("activate", (event) => {
   console.log("[SW] activated");
-  event.waitUntil(cleanupCache);
+  event.waitUntil(cleanupCache()); // <-- Fix here
 });
 
 async function fetchAssets(event) {
@@ -40,6 +49,6 @@ async function fetchAssets(event) {
 }
 
 self.addEventListener("fetch", (event) => {
-  console.log("[SW] fetched");
+  console.log("[SW] fetched", event.request.url);
   event.respondWith(fetchAssets(event));
 });
