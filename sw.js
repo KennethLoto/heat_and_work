@@ -9,6 +9,7 @@ async function preCache() {
 
 self.addEventListener("install", (event) => {
   console.log("[SW] installed");
+  self.skipWaiting();
   event.waitUntil(preCache());
 });
 
