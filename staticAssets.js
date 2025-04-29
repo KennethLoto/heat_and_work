@@ -101,5 +101,5 @@ const STATIC_ASSETS = [
   "/js/pretestJs.js",
   "/js/scrollbot.js",
   "/js/scrollreveal.min.js",
-  "/js/wow.js"
+  "/js/wow.js",
 ];
